@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#boost {
+    background-image: url('../img/bg-boost-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.ficon:hover {
+    filter: invert(39%) sepia(61%) saturate(464%) hue-rotate(130deg)
+      brightness(89%) contrast(95%);
+  }
+
+  .menu {
+    color: grayishViolet;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+  }
+  
+  .menu-top,
+  .menu-middle,
+  .menu-bottom {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background: #9c9aa6;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+  
+  .menu-middle {
+    transform: translateY(7px);
+  }
+  
+  .menu-bottom {
+    transform: translateY(14px);
+  }
+  
+  .open {
+    transform: rotate(90deg);
+    transform: translateY(0px)
+  }
+  
+  .open .menu-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+  
+  .open .menu-middle {
+    display: none;
+  }
+  
+  .open .menu-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  }
